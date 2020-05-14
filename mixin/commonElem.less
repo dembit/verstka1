@@ -2,11 +2,12 @@
 
 .wrap {
 	position: relative;
+	height: 100%;
 	&__blockNumber {
 		display: grid;
 		position: absolute;
-		width: 160px;
-		height: 104px;
+		width: 100%;
+    height: 100%;
 		opacity: 0.8;
 		background-color: #fff;
 		text-align: center;
@@ -27,7 +28,7 @@
 					border: 5px solid transparent;
 					border-left: 4px solid;
 					top: 39%;
-					right: 20px;
+					right: 4%;
 				}
 
 			}
@@ -38,3 +39,38 @@
 
 }
 
+
+.teaser {
+	
+	display: grid;
+	background-color: #fbf6e8;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: minmax(80px, auto);
+	&-img {
+		height: 100%;
+		img {
+			height: 100%;
+			width: inherit;
+		}
+	}
+	&-text {
+		padding: 7px 16px 9px 19px;
+		p:nth-child(1) {
+			color: #bebebe;
+			font-size: 10px;
+			font-weight: 700;
+		}
+		h3 {
+			margin: 2% 0;
+			font-weight: 700;
+			font-size: 12px;
+		}
+		p:nth-child(3) {
+			line-height: 14px;
+			font-size: 12px;
+		}
+	}
+
+
+	
+}

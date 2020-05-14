@@ -1,7 +1,5 @@
 @import "../mixin/commonElem.less";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Playfair+Display&display=swap');
-
-
 * {
 	font-family: "Noto Sans", serif;
 	font-weight: 400;
@@ -29,7 +27,7 @@ body {
 .page {
 	margin: 0 auto;
 	padding: 34px;
-	max-width: 768px;
+	max-width: 700px;
 	background-color: #ffffff;
 }
 
@@ -117,12 +115,16 @@ body {
 
 .gallery {
 	display: grid;
-	grid-template-columns: repeat(4, minmax(140px, 1fr));
-	grid-auto-rows: minmax(100px, 115px);
+	grid-template-columns: repeat(4, minmax(80px, 1fr));
+	grid-auto-rows: minmax(53px, auto);
 	grid-gap: 20px;
 	&__item {
+		height: 100%;
 		&:hover {
 			opacity: 0.3;
+		}
+		img {
+			height: 100%;
 		}
 	}
 	&__reclame1 {
@@ -137,7 +139,15 @@ body {
 		grid-row-end: 7;
 	}
 
-
+	&__teaserWrap {
+		display: none;
+		padding: 10px 0;
+		grid-column-start: 1;
+		grid-column-end: 5;
+		grid-row-start: 3;
+		grid-row-end: 5;
+	}
+	
 }
 
 .pagination {
@@ -179,4 +189,5 @@ body {
 
 
 
+@import "../media/media.less";
 
